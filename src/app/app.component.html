@@ -1,0 +1,30 @@
+<div>home page</div>
+<div>
+  <input type="text" [(ngModel)]="msgInput">
+  <a style="padding: 10px; background: red;" (click)="pushMessage(msgInput)">send</a>
+</div>
+
+<div *ngFor="let hello of gg">
+  {{hello.message}}
+</div>
+
+<div *ngFor="let hello of hello">
+  {{hello.msg}}
+</div>
+<h1>live doc type ***{{typingdata}}</h1>
+<div *ngIf="typings">{{typingdata}}....</div>
+<div>
+  <textarea [(ngModel)]='document' (keypress)='typing($event)' placeholder='Start typing...'></textarea>
+</div>
+
+<div>
+  <!-- <img src="videoplay" id="play"> -->
+  <img style="width: 200px; height: 200px;" [src]="videoplay" id="play">
+
+        <div [innerHTML]="videoplay"></div>
+        <video [src]="videoplay" style="width:700px; height: 350px;" autoplay="true"></video>
+</div>
+
+<div>
+  <app-chat></app-chat>
+</div>
